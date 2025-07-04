@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Messenger Bags - Tas Selempang Premium</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👜</text></svg>">
+
+    <style>
+        /* === DESAIN & VISUAL === */
+        :root {
+            --bg-color: #FFFBF0; /* Creamy White */
+            --text-color: #5D4037; /* Warm Brown */
+            --accent-gold: #D4AF37; /* Gold */
+            --accent-light: #FAE7B5; /* Light Creamy Gold */
+            --white-color: #FFFFFF;
+            --promo-red: #E53935;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Lato', sans-serif;
+        }
+
+        /* === GLOBAL STYLES === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* === 1. GAMBAR UTAMA === */
+        .main-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* === 2. JUDUL & DESKRIPSI === */
+        .product-intro {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .product-intro h1 {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            color: var(--text-color);
+            margin-bottom: 20px;
+        }
+
+        .product-specs {
+            list-style: none;
+            padding: 0;
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .product-specs li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--accent-light);
+        }
+        
+        .product-specs li strong {
+            display: inline-block;
+            width: 120px;
+            color: #333;
+        }
+        
+        /* === 3. KEUNGGULAN PRODUK === */
+        .why-us {
+            background-color: var(--white-color);
+            padding: 50px 0;
+        }
+
+        .why-us h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .feature-icon {
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            background-color: var(--accent-light);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        /* === 4 & 5. DETAIL PRODUK & VARIAN WARNA === */
+        .product-details, .color-variants {
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .product-details h2, .color-variants h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+        }
+        
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        
+        .details-grid img, .color-variants img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .details-grid figcaption {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+        
+        /* === 6. TESTIMONI === */
+        .testimonials {
+            background-color: var(--accent-light);
+            padding: 50px 0;
+        }
+
+        .testimonials h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .testimonial-card {
+            background: var(--white-color);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--accent-gold);
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card .author {
+            font-weight: 700;
+            color: var(--text-color);
+            text-align: right;
+        }
+        
+        /* === 7 & 9. WAKTU PROMO & HARGA === */
+        .promo-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .price-box {
+            background-color: var(--white-color);
+            border: 2px dashed var(--accent-gold);
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 500px;
+            margin: 0 auto 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+        
+        .price-box .promo-title {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--promo-red);
+        }
+        
+        .price-box .promo-subtitle {
+            margin: 10px 0 20px;
+        }
+        
+        .price-box .price-label {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        
+        .price-box .normal-price {
+            font-size: 1.5rem;
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .price-box .promo-price {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--promo-red);
+            margin: 5px 0 10px;
+        }
+
+        .price-box .savings {
+            background-color: var(--promo-red);
+            color: var(--white-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            display: inline-block;
+        }
+        
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .timer-box {
+            background: var(--text-color);
+            color: var(--white-color);
+            padding: 10px;
+            border-radius: 5px;
+            min-width: 70px;
+        }
+        
+        .timer-box .timer-value {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .timer-box .timer-label {
+            font-size: 0.8rem;
+        }
+        
+        /* === 8. NOTE PEMESANAN === */
+        .order-notes {
+            max-width: 500px;
+            margin: 0 auto 40px;
+            background-color: #f0f0f0;
+            border-left: 5px solid var(--accent-gold);
+            padding: 20px;
+        }
+
+        .order-notes ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .order-notes li {
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .order-notes li::before {
+            content: '✓';
+            color: green;
+            font-weight: bold;
+        }
+        
+        /* === 10. GAMBAR DI ATAS FORM === */
+        .form-promo-image-container {
+            position: relative;
+            max-width: 600px;
+            margin: 20px auto 40px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        
+        .form-promo-image-container img {
+            width: 100%;
+            display: block;
+        }
+        
+        .form-promo-image-container::after {
+            content: 'DISKON 25%';
+            position: absolute;
+            top: 25px;
+            right: -50px;
+            background-color: var(--promo-red);
+            color: white;
+            padding: 10px 50px;
+            font-weight: bold;
+            transform: rotate(45deg);
+            font-size: 1.2rem;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        
+        /* === 11. FORM PEMESANAN === */
+        .form-container {
+            background: var(--white-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* === RESPONSIVE DESIGN === */
+        @media (min-width: 600px) {
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .details-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://cdn.techcloudly.com/image/d84d68f28b988f1332154653b0142ca75c2d3f59.jpeg" alt="Tas Selempang Wanita Mewah" class="main-image">
+
+    <div class="container">
+
+        <section class="product-intro">
+            <h1>Luxury Messenger Bags</h1>
+            <ul class="product-specs">
+                <li><strong>Jenis:</strong> Tas selempang</li>
+                <li><strong>Cocok:</strong> Tali bahu yang nyaman dan dapat disesuaikan</li>
+                <li><strong>Jenis kelamin:</strong> Wanita</li>
+                <li><strong>Ukuran:</strong> 20,5 x 15 x 6,5 cm (P tali total: 130 cm)</li>
+                <li><strong>Warna:</strong> Hitam, Cokelat, Hijau, Merah Anggur</li>
+                <li><strong>Warna baru:</strong> Biru muda, abu-abu, putih, ungu, biru tua</li>
+                <li><strong>Bahan:</strong> Kulit PU (kedap air, mudah dibersihkan, tahan abrasi)</li>
+            </ul>
+        </section>
+
+        <section class="why-us">
+            <div class="container">
+                <h2>MENGAPA KAMI?</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">💎</div>
+                        <div>
+                            <h4>Kualitas Terbaik</h4>
+                            <p>Kami bekerja langsung dengan produsen untuk memastikan kualitas produk terbaik.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💰</div>
+                        <div>
+                            <h4>Harga Kompetitif</h4>
+                            <p>Anda mendapatkan produk mewah dengan harga yang sangat terjangkau.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🤝</div>
+                        <div>
+                            <h4>Layanan Luar Biasa</h4>
+                            <p>Tim layanan pelanggan kami siap membantu Anda kapan saja.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⭐</div>
+                        <div>
+                            <h4>Ulasan Pelanggan</h4>
+                            <p>Ribuan pelanggan puas dengan produk dan layanan kami.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="product-details">
+            <h2>Detail Produk</h2>
+            <div class="details-grid">
+                <figure>
+                    <img src="https://cdn.techcloudly.com/image/c8a0a8f03893b77f54e686d044c097d0ebd656b3.jpeg" alt="Detail desain modern tas">
+                    <figcaption>Desain Modern & Minimalis</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://cdn.techcloudly.com/image/8dd532b5fe8b22f5bd18a6ea17ca1d84e3786799.jpeg" alt="Kapasitas penyimpanan tas">
+                    <figcaption>Kapasitas Ideal untuk Kebutuhan Harian</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://cdn.techcloudly.com/image/34e8df2a101cccf32424ec197d0623fc5ac76985.jpeg" alt="Bahan kulit PU premium">
+                    <figcaption>Material Kulit PU Premium & Tahan Lama</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://cdn.techcloudly.com/image/75a304a15438bafe8f5fdf7e83825599aaf00bfb.jpeg" alt="Tali selempang yang nyaman">
+                    <figcaption>Tali Selempang Nyaman & Dapat Disesuaikan</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="color-variants">
+            <h2>Varian Warna Menarik</h2>
+            <img src="https://cdn.techcloudly.com/image/c8a0a8f03893b77f54e686d044c097d0ebd656b3.jpeg" alt="Pilihan warna tas selempang">
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>Kata Pelanggan Kami</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p>"Tasnya cantik banget, desainnya simpel tapi mewah. Cocok buat meeting sama klien. Kualitasnya juga oke, jahitannya rapi. Definitely worth it!"</p>
+                        <div class="author">- Ayu, 28, Desainer Grafis, Jakarta</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Ukurannya pas! Nggak terlalu besar tapi muat dompet panjang, HP, dan pouch makeup. Bahannya gampang dibersihin, penting banget buat yang punya anak kecil. Suka!"</p>
+                        <div class="author">- Citra, 35, Ibu Muda, Bandung</div>
+                    </div>
+                    <div class="testimonial-card">
+                         <p>"Warnanya lucu-lucu, bingung milihnya. Akhirnya ambil yang cokelat, warnanya persis kayak di foto. Sering ditanyain temen-temen kampus, katanya tas aku keren. Hehe."</p>
+                        <div class="author">- Putri, 24, Mahasiswi, Yogyakarta</div>
+                    </div>
+                     <div class="testimonial-card">
+                        <p>"Pengirimannya cepat, packingnya juga aman. Pas barangnya datang, wow, melebihi ekspektasi. Kelihatan jauh lebih mahal dari harganya. Recommended seller!"</p>
+                        <div class="author">- Rina, 42, Wiraswasta, Surabaya</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="promo-section">
+            <div class="price-box">
+                <div class="promo-title">PROMO SPESIAL HARI INI</div>
+                <p class="promo-subtitle">Dapatkan Diskon Spesial Untuk Hari Ini Saja, Harga Akan Kembali Normal Setelah:</p>
+                <div class="price-label">Harga Normal</div>
+                <div class="normal-price">Rp 239.900</div>
+                <div class="price-label">HARGA PROMO</div>
+                <div class="promo-price">Rp 180.900</div>
+                <div class="savings">Anda Hemat Rp 59.000</div>
+            </div>
+            
+            <div class="countdown-timer" id="countdown">
+                <div class="timer-box"><span id="days" class="timer-value">00</span><span class="timer-label">HARI</span></div>
+                <div class="timer-box"><span id="hours" class="timer-value">00</span><span class="timer-label">JAM</span></div>
+                <div class="timer-box"><span id="minutes" class="timer-value">00</span><span class="timer-label">MENIT</span></div>
+                <div class="timer-box"><span id="seconds" class="timer-value">00</span><span class="timer-label">DETIK</span></div>
+            </div>
+        </section>
+        
+        <section class="order-notes-section">
+            <div class="order-notes">
+                <ul>
+                    <li>Pengiriman 2 - 4 Hari Setelah Pemesanan</li>
+                    <li>Mohon Isi Alamat Dengan Lengkap</li>
+                    <li>100% Product Original</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="form-promo-image-container">
+            <img src="https://cdn.techcloudly.com/image/6c4794eb5c04ee1bf85b02835cfc3d2db127525d.jpeg" alt="Promo tas selempang">
+        </div>
+
+        <div class="form-container">
+            <div class="ooef"> <form class="orderonline-embed-form" data-username="emma" data-product-slug="crossbody-leather-bag" data-product-id="68679a2bd99dedcfb20f8bcf" id="oo-embed-form-crossbody-leather-bag-4927" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://emma.orderonline.id'); ooe('init', '5f16831a9d8e8e4fb67472e5', '68679a2bd99dedcfb20f8bcf', null, 'oo-embed-form-crossbody-leather-bag-4927', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> </div>
+
+    </div>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // --- Countdown Timer ---
+        const countdownElement = document.getElementById('countdown');
+        if (countdownElement) {
+            // Atur waktu berakhir (misal: 2 hari dari sekarang)
+            const countdownDate = new Date().getTime() + (2 * 24 * 60 * 60 * 1000); 
+
+            const updateCountdown = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countdownDate - now;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').innerText = String(days).padStart(2, '0');
+                document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+                document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+
+                if (distance < 0) {
+                    clearInterval(updateCountdown);
+                    countdownElement.innerHTML = "<p>WAKTU PROMO HABIS</p>";
+                }
+            }, 1000);
+        }
+    });
+    </script>
+</body>
+</html>
